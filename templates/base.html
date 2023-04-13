@@ -10,7 +10,7 @@
     <h1>Take Our Survey!</h1>
         <section class="survey">    
     {% for question in questions %}
-    <p>{{ question }}</p>
+    <p>{{ question.question }}</p>
     {% endfor %} 
         </section>
     {% block content %} {% endblock %}
