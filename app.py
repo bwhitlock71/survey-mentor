@@ -11,13 +11,12 @@ responses = []
 
 @app.route('/')
 def show_route():
+    return render_template('base.html')  
 
-    question = satisfaction_survey.questions
-    return render_template('base.html', questions=question)  
-
-@app.route('/question')
+@app.route('/question', methods=["POST"])
 def show_questions():
-    return render_template('question.html')
+      question = satisfaction_survey.questions
+      return render_template('question.html',questions=question)
     
    
 
